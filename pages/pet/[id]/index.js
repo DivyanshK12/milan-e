@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import dbConnect from '../../lib/dbConnect'
-import Pet from '../../models/Pet'
+import dbConnect from '../../../lib/dbConnect'
+import Pet from '../../../models/Pet'
 
 /* Allows you to view pet card info and delete pet card*/
 const PetPage = ({ pet }) => {

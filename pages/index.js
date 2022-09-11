@@ -1,65 +1,33 @@
+import { withPageAuthRequired } from '@auth0/nextjs-auth0';
+import { useUser } from '@auth0/nextjs-auth0';
 import Link from 'next/link'
-import dbConnect from '../lib/dbConnect'
-import Pet from '../models/Pet'
+import Barcode from "react-barcode";
+import { useState, useRef } from "react";
 
-const Index = ({ pets }) => (
-  <>
-    {/* Create a card for each pet */}
-    {pets.map((pet) => (
-      <div key={pet._id}>
-        <div className="card">
-          <img src={pet.image_url} />
-          <h5 className="pet-name">{pet.name}</h5>
-          <div className="main-content">
-            <p className="pet-name">{pet.name}</p>
-            <p className="owner">Owner: {pet.owner_name}</p>
+const Profile = () => {
+    const { user, error, isLoading } = useUser();
+    if (isLoading) return <div>Loading...</div>;
+    if (error) return <div>{error.message}</div>;
+    if (!user) return <Link href="/api/auth/login"><a>Login</a></Link>;
 
-            {/* Extra Pet Info: Likes and Dislikes */}
-            <div className="likes info">
-              <p className="label">Likes</p>
-              <ul>
-                {pet.likes.map((data, index) => (
-                  <li key={index}>{data} </li>
-                ))}
-              </ul>
-            </div>
-            <div className="dislikes info">
-              <p className="label">Dislikes</p>
-              <ul>
-                {pet.dislikes.map((data, index) => (
-                  <li key={index}>{data} </li>
-                ))}
-              </ul>
-            </div>
+    const barcodeRef = useRef(null);
+    const [barcode, setBarcode] = useState("CODE128");
+    const handleChange = (event) => {
+      setBarcode(event.target.value ? event.target.value : "");
+    };
+    const id = user.email.split("@")[0].toUpperCase();
+    return <div>Hello {user.name}.. {user.email}, <img src={user.picture} referrerpolicy="no-referrer"/>
+      <Barcode
+        value={id}
+        height={90}
+        width={1.5}
+        fontOptions="600"
+        textMargin={4}
+        margin={5}
+        ref={barcodeRef}
+      />
+      <Link href="/api/auth/logout"><a>Logout</a></Link>
+    </div>;
+  }
 
-            <div className="btn-container">
-              <Link href="/[id]/edit" as={`/${pet._id}/edit`}>
-                <button className="btn edit">Edit</button>
-              </Link>
-              <Link href="/[id]" as={`/${pet._id}`}>
-                <button className="btn view">View</button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    ))}
-  </>
-)
-
-/* Retrieves pet(s) data from mongodb database */
-export async function getServerSideProps() {
-  await dbConnect()
-
-  /* find all the data in our database */
-  const result = await Pet.find({})
-  const pets = result.map((doc) => {
-    const pet = doc.toObject()
-    pet._id = pet._id.toString()
-    return pet
-  })
-
-  return { props: { pets: pets } }
-}
-
-export default Index
+export default withPageAuthRequired(Profile)
