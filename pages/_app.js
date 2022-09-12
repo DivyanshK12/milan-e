@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
     <>
     <UserProvider>
       <Head>
-        <title>Pet Care App</title>
+        <title>Enhanced Mess App</title>
       </Head>
 
       <div className="top-bar">

@@ -11,12 +11,13 @@ const Profile = () => {
     if (!user) return <Link href="/api/auth/login"><a>Login</a></Link>;
 
     const barcodeRef = useRef(null);
-    const [barcode, setBarcode] = useState("CODE128");
-    const handleChange = (event) => {
-      setBarcode(event.target.value ? event.target.value : "");
-    };
+    const [barcode, setBarcode] = useState("CODE39");
+
     const id = user.email.split("@")[0].toUpperCase();
-    return <div>Hello {user.name}.. {user.email}, <img src={user.picture} referrerpolicy="no-referrer"/>
+
+    return <div>
+      <h1 className='text-pink-500' >Hello {user.name}</h1>
+      <img src={user.picture} referrerpolicy="no-referrer"/>
       <Barcode
         value={id}
         height={90}
@@ -24,9 +25,9 @@ const Profile = () => {
         fontOptions="600"
         textMargin={4}
         margin={5}
+        background="#ffffff"
         ref={barcodeRef}
       />
-      <Link href="/api/auth/logout"><a>Logout</a></Link>
     </div>;
   }
 

@@ -3,7 +3,6 @@ import dbConnect from '../lib/dbConnect'
 import Pet from '../models/Pet'
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 
-// const { user, error, isLoading } = useUser();
 
 const Index = ({ pets }) => (
   <>
