@@ -1,5 +1,5 @@
 import dbConnect from '../../../lib/dbConnect'
-import Pet from '../../../models/Pet'
+import Count from '../../../models/Count'
 
 export default async function handler(req, res) {
   const { method } = req
@@ -9,24 +9,27 @@ export default async function handler(req, res) {
   switch (method) {
     case 'GET':
       try {
-        const pets = await Pet.find({}) /* find all the data in our database */
-        res.status(200).json({ success: true, data: pets })
+        const counts = await Count.find({}) /* find all the data in our database */
+        res.status(200).json({ success: true, data: counts })
       } catch (error) {
         res.status(400).json({ success: false })
       }
       break
     case 'POST':
       try {
-        const pet = await Pet.create(
+        const count = await Count.create(
           req.body
         ) /* create a new model in the database */
-        res.status(201).json({ success: true, data: pet })
+        res.status(201).json({ success: true, data: count })
       } catch (error) {
+        console.log(error)
         res.status(400).json({ success: false })
       }
       break
-    default:
-      res.status(400).json({ success: false })
+    default: {
+        console.log(method)
+        res.status(400).json({ success: false })
+      }
       break
   }
 }

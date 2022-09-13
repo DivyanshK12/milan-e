@@ -10,10 +10,10 @@ export const MenuFormTable = (props) => {
                             <table className="table-fixed max-w-md w-auto">
                                 <thead className="border-b">
                                     <tr>
-                                        <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                        <th scope="col" className="text-sm font-medium text-emerald-200 px-6 py-4 text-left">
                                             Item
                                         </th>
-                                        <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                        <th scope="col" className="text-sm font-medium text-emerald-200 px-6 py-4 text-left">
                                             Rating
                                         </th>
                                     </tr>
@@ -22,7 +22,7 @@ export const MenuFormTable = (props) => {
                                     {props.items.map((item, index) => {
                                         return (
                                             <tr key={index} className="border-b">
-                                                <td className="px-6 py-4 text-sm text-gray-500">
+                                                <td className="px-6 py-4 text-sm text-gray-100">
                                                     {item}
                                                 </td>
                                                 <td className="px-3 py-1">

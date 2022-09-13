@@ -12,26 +12,29 @@ function MyApp({ Component, pageProps }) {
         <title>Enhanced Mess App</title>
       </Head>
 
-      <div className="top-bar">
+      <div className="top-bar bg-emerald-600">
         <div className="nav">
           <Link href="/">
-            <a>Home</a>
+            <a className="text-white">Home</a>
           </Link>
-          <Link href="/new">
-            <a>Add Pet</a>
+          <Link href="api/count">
+            <a className="text-white">Count</a>
+          </Link>
+          <Link href="api/rating">
+            <a className="text-white">Rating</a>
           </Link>
           <Link href="api/auth/logout">
-            <a>Logout</a>
+            <a className="text-white">Logout</a>
           </Link>
         </div>
 
         <img
           id="title"
-          src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Pet_logo_with_flowers.png"
-          alt="pet care logo"
+          src="ema.png"
+          alt="enhanced mess app logo"
         ></img>
       </div>
-      <div className="grid wrapper">
+      <div className="grid wrapper bg-zinc-900">
         <Component {...pageProps} />
       </div>
       </UserProvider>

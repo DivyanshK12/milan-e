@@ -48,7 +48,7 @@ const MealForm = ({ formId, mealForm, items, hall, meal, date }) => { // will us
           }
         })
 
-      } else if (resOld.status === 404) {
+      } else if (resOld.status === 204) {
         const res = await fetch(`/api/rating`, {
           method: 'POST',
           headers: {

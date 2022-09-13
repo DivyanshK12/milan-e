@@ -1,7 +1,10 @@
 import mongoose from 'mongoose'
 
-/* PetSchema will correspond to a collection in your MongoDB database. */
-const RatingSchema = new mongoose.Schema({
+const CountSchema = new mongoose.Schema({
+    uid: {
+        type: String,
+        required: [true, 'Please provide a unique id.'],
+    },
     meal: {
         /* The name of this meal : Breakfast, Lunch, Snacks, Dinner*/
 
@@ -26,4 +29,4 @@ const RatingSchema = new mongoose.Schema({
     },
 })
 
-export default mongoose.models.Rating || mongoose.model('Count', RatingSchema)
+export default mongoose.models.Count || mongoose.model('Count', CountSchema)
