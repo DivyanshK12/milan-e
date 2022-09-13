@@ -8,14 +8,13 @@ export const BarCodeButton = (props) => {
 
     const [showBarcode, setShowBarcode] = useState(false);
     const [btn, setBtn] = useState(false);
-    const { user } = useUser();
 
     let curDate = new Date();
     let newMeal = getMeal(curDate.getHours());
     let oldMeal = sessionStorage.getItem("meal");
     console.log(`${oldMeal} ${newMeal}`);
 
-    if (!user || oldMeal != newMeal) {
+    if (oldMeal != newMeal && oldMeal != null) {
         setShowBarcode(false);
         setBtn(false);
     }
