@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }) {
 
         <img
           id="title"
-          src="ema.png"
+          src="EMA.png"
           alt="enhanced mess app logo"
         ></img>
       </div>
