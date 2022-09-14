@@ -17,10 +17,10 @@ function MyApp({ Component, pageProps }) {
           <Link href="/">
             <a className="text-white">Home</a>
           </Link>
-          <Link href="api/count">
+          <Link href="count">
             <a className="text-white">Count</a>
           </Link>
-          <Link href="api/rating">
+          <Link href="rating">
             <a className="text-white">Rating</a>
           </Link>
           <Link href="api/auth/logout">
@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }) {
           alt="enhanced mess app logo"
         ></img>
       </div>
-      <div className="grid wrapper bg-zinc-900">
+      <div className="grid wrapper">
         <Component {...pageProps} />
       </div>
       </UserProvider>

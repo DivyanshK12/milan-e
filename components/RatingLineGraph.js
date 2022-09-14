@@ -6,7 +6,7 @@ const Plot = createPlotComponent(plotly);
 
 export const LineChart = (props) => {
     let dataFetch = async () => {
-        let countRes = await fetch(`/api/demo/count`, { method: 'GET' });
+        let countRes = await fetch(`/api/demo/rating`, { method: 'GET' });
         let resData = await countRes.json();
         return resData;
     }
@@ -33,7 +33,7 @@ export const LineChart = (props) => {
                         type: 'scatter',
                         mode: 'lines+points',
                         x: ldh.filter((d) => d.meal === 'Breakfast').map((d) => d.date),
-                        y: ldh.filter((d) => d.meal === 'Breakfast').map((d) => d.count),
+                        y: ldh.filter((d) => d.meal === 'Breakfast').map((d) => d.rating),
                         marker: { color: 'red' },
                         name: 'Breakfast',
                     },
@@ -41,7 +41,7 @@ export const LineChart = (props) => {
                         type: 'scatter',
                         mode: 'lines+points',
                         x: ldh.filter((d) => d.meal === 'Lunch').map((d) => d.date),
-                        y: ldh.filter((d) => d.meal === 'Lunch').map((d) => d.count),
+                        y: ldh.filter((d) => d.meal === 'Lunch').map((d) => d.rating),
                         marker: { color: 'blue' },
                         name: 'Lunch',
                     },
@@ -49,7 +49,7 @@ export const LineChart = (props) => {
                         type: 'scatter',
                         mode: 'lines+points',
                         x: ldh.filter((d) => d.meal === 'Dinner').map((d) => d.date),
-                        y: ldh.filter((d) => d.meal === 'Dinner').map((d) => d.count),
+                        y: ldh.filter((d) => d.meal === 'Dinner').map((d) => d.rating),
                         marker: { color: 'green' },
                         name: 'Dinner',
                     },
@@ -62,7 +62,7 @@ export const LineChart = (props) => {
                         type: 'scatter',
                         mode: 'lines+points',
                         x: udh.filter((d) => d.meal === 'Breakfast').map((d) => d.date),
-                        y: udh.filter((d) => d.meal === 'Breakfast').map((d) => d.count),
+                        y: udh.filter((d) => d.meal === 'Breakfast').map((d) => d.rating),
                         marker: { color: 'red' },
                         name: 'Breakfast',
                     },
@@ -70,7 +70,7 @@ export const LineChart = (props) => {
                         type: 'scatter',
                         mode: 'lines+points',
                         x: udh.filter((d) => d.meal === 'Lunch').map((d) => d.date),
-                        y: udh.filter((d) => d.meal === 'Lunch').map((d) => d.count),
+                        y: udh.filter((d) => d.meal === 'Lunch').map((d) => d.rating),
                         marker: { color: 'blue' },
                         name: 'Lunch',
                     },
@@ -78,7 +78,7 @@ export const LineChart = (props) => {
                         type: 'scatter',
                         mode: 'lines+points',
                         x: udh.filter((d) => d.meal === 'Dinner').map((d) => d.date),
-                        y: udh.filter((d) => d.meal === 'Dinner').map((d) => d.count),
+                        y: udh.filter((d) => d.meal === 'Dinner').map((d) => d.rating),
                         marker: { color: 'green' },
                         name: 'Dinner',
                     },

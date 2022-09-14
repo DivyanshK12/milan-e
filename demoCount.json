@@ -1,0 +1,149 @@
+{
+    "success": true,
+    "data": [
+        {
+            "_id": "6320fb6ac8708079cc2e7234",
+            "uid": "14_8_2022_LDH_Breakfast",
+            "meal": "Breakfast",
+            "hall": "LDH",
+            "date": "2022-09-13T04:13:42.171Z",
+            "count": 13,
+            "__v": 0
+        },
+        {
+            "_id": "6320fb92c8708079cc2e7237",
+            "uid": "14_8_2022_UDH_Breakfast",
+            "meal": "Breakfast",
+            "hall": "UDH",
+            "date": "2022-09-13T22:49:33.970Z",
+            "count": 7,
+            "__v": 0
+        },
+        {
+            "_id": "6320fb6ac8708079cc2e7234",
+            "uid": "15_8_2022_LDH_Breakfast",
+            "meal": "Breakfast",
+            "hall": "LDH",
+            "date": "2022-09-14T04:13:42.171Z",
+            "count": 16,
+            "__v": 0
+        },
+        {
+            "_id": "6320fb92c8708079cc2e7237",
+            "uid": "15_8_2022_UDH_Breakfast",
+            "meal": "Breakfast",
+            "hall": "UDH",
+            "date": "2022-09-14T22:49:33.970Z",
+            "count": 8,
+            "__v": 0
+        },
+        {
+            "_id": "6320fb6ac8708079cc2e7234",
+            "uid": "16_8_2022_LDH_Breakfast",
+            "meal": "Breakfast",
+            "hall": "LDH",
+            "date": "2022-09-15T04:13:42.171Z",
+            "count": 11,
+            "__v": 0
+        },
+        {
+            "_id": "6320fb92c8708079cc2e7237",
+            "uid": "14_6_2022_UDH_Breakfast",
+            "meal": "Breakfast",
+            "hall": "UDH",
+            "date": "2022-09-15T22:49:33.970Z",
+            "count": 17,
+            "__v": 0
+        },
+        {
+            "_id": "6320fb6ac8708079cc2e7234",
+            "uid": "14_8_2022_LDH_Breakfast",
+            "meal": "Breakfast",
+            "hall": "LDH",
+            "date": "2022-09-16T04:13:42.171Z",
+            "count": 19,
+            "__v": 0
+        },
+        {
+            "_id": "6320fb92c8708079cc2e7237",
+            "uid": "14_8_2022_UDH_Breakfast",
+            "meal": "Breakfast",
+            "hall": "UDH",
+            "date": "2022-09-16T22:49:33.970Z",
+            "count": 2,
+            "__v": 0
+        },
+        {
+            "_id": "6320fb6ac8708079cc2e7234",
+            "uid": "14_8_2022_LDH_Breakfast",
+            "meal": "Lunch",
+            "hall": "LDH",
+            "date": "2022-09-13T04:13:42.171Z",
+            "count": 15,
+            "__v": 0
+        },
+        {
+            "_id": "6320fb92c8708079cc2e7237",
+            "uid": "14_8_2022_UDH_Breakfast",
+            "meal": "Lunch",
+            "hall": "UDH",
+            "date": "2022-09-13T22:49:33.970Z",
+            "count": 30,
+            "__v": 0
+        },
+        {
+            "_id": "6320fb6ac8708079cc2e7234",
+            "uid": "15_8_2022_LDH_Breakfast",
+            "meal": "Lunch",
+            "hall": "LDH",
+            "date": "2022-09-14T04:13:42.171Z",
+            "count": 17,
+            "__v": 0
+        },
+        {
+            "_id": "6320fb92c8708079cc2e7237",
+            "uid": "15_8_2022_UDH_Breakfast",
+            "meal": "Lunch",
+            "hall": "UDH",
+            "date": "2022-09-14T22:49:33.970Z",
+            "count": 18,
+            "__v": 0
+        },
+        {
+            "_id": "6320fb6ac8708079cc2e7234",
+            "uid": "16_8_2022_LDH_Breakfast",
+            "meal": "Lunch",
+            "hall": "LDH",
+            "date": "2022-09-15T04:13:42.171Z",
+            "count": 1,
+            "__v": 0
+        },
+        {
+            "_id": "6320fb92c8708079cc2e7237",
+            "uid": "14_6_2022_UDH_Breakfast",
+            "meal": "Lunch",
+            "hall": "UDH",
+            "date": "2022-09-15T22:49:33.970Z",
+            "count": 7,
+            "__v": 0
+        },
+        {
+            "_id": "6320fb6ac8708079cc2e7234",
+            "uid": "14_8_2022_LDH_Breakfast",
+            "meal": "Lunch",
+            "hall": "LDH",
+            "date": "2022-09-16T04:13:42.171Z",
+            "count": 9,
+            "__v": 0
+        },
+        {
+            "_id": "6320fb92c8708079cc2e7237",
+            "uid": "14_8_2022_UDH_Breakfast",
+            "meal": "Lunch",
+            "hall": "UDH",
+            "date": "2022-09-16T22:49:33.970Z",
+            "count": 12,
+            "__v": 0
+        }
+    ]
+}

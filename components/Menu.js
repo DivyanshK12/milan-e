@@ -34,7 +34,7 @@ export const Menu = (props) => {
                 <i className='px-2 text-emerald-300'>LDH</i>
                 <Switch isOn={switchValue} handleToggle={() => switchSetValue(!switchValue)} onColor='#6ee7b7' />
                 <i className='px-2 text-emerald-300'>UDH</i>
-                <button type="submit" className="inline-block px-5 mx-5 py-3 bg-emerald-300 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-emerald-400 hover:shadow-lg focus:bg-emerald-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-emerald-500 active:shadow-lg transition duration-150 ease-in-out" form="meal-rating-form">
+                <button type="submit" className="inline-block px-5 mx-5 py-3 bg-emerald-400 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-emerald-500 hover:shadow-lg focus:bg-emerald-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-emerald-600 active:shadow-lg transition duration-150 ease-in-out" form="meal-rating-form">
                     Submit
                 </button>
             </div>

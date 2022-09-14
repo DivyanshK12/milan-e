@@ -1,82 +1,35 @@
-## Example app using MongoDB
+# Enhanced Mess App
+This is a minimum viable version of an enhanced mess app to have better mess auth, mess usage rates across meals and halls and better food feedback pipeline.
 
-[MongoDB](https://www.mongodb.com/) is a general purpose, document-based, distributed database built for modern application developers and for the cloud era. This example will show you how to connect to and use MongoDB as your backend for your Next.js app.
+# Local Setup
+1. Clone repo, install npm packages
+2. Create a .env file in the root directory and add the following variables :
+    * MONGODB_URI=
+    * AUTH0_SECRET=''
+    * AUTH0_BASE_URL='http://localhost:3000'
+    * AUTH0_ISSUER_BASE_URL=''
+    * AUTH0_CLIENT_ID=''
+    * AUTH0_CLIENT_SECRET=''
 
-If you want to learn more about MongoDB, visit the following pages:
+All variables from Auth0 provider can be obtained from setup desribed here : https://github.com/auth0/nextjs-auth0
+MongoDB URI can be obtained from MongoDB Atlas. This procedure is described in the README-NextJS.md file in the root directory.
+This file was auto generated from project setup, as mentioned in the README-NextJS.md file.
 
-- [MongoDB Atlas](https://mongodb.com/atlas)
-- [MongoDB Documentation](https://docs.mongodb.com/)
+# Current Limitations 
+1. User needs to manually switch Halls each time barcode is generated. Button generation per meal is not tested out yet.
+2. Current visualizations for ratings are not very intuitive. Need to work on that to show better insights depending on specific meal and hall.
+3. Pulls menu data from Dashboard's API. This is an external dependecy and has not been updated so is unviable for immediate deployment
 
-## Deploy your own
+# Future Scope 
+1. Hope to eliminate need for carrying ID cards to mess. This system can be made to be more secure than just ID card number very easily
+2. Better Feedback visualizations, possibly per item instead of a meal as a whole would help caterers to make better decisions
+3. With information about the nutrition content of various items, can help students track their own consumption to be healthier
 
-Once you have access to the environment variables you'll need, deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?project-name=with-mongodb&repository-name=with-mongodb&repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fwith-mongodb&integration-ids=oac_jnzmjqM10gllKmSrG0SGrHOH)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-mongodb with-mongodb-app
-```
-
-```bash
-yarn create next-app --example with-mongodb with-mongodb-app
-```
-
-```bash
-pnpm create next-app --example with-mongodb with-mongodb-app
-```
-
-## Configuration
-
-### Set up a MongoDB database
-
-Set up a MongoDB database either locally or with [MongoDB Atlas for free](https://mongodb.com/atlas).
-
-### Set up environment variables
-
-Copy the `env.local.example` file in this directory to `.env.local` (which will be ignored by Git):
-
-```bash
-cp .env.local.example .env.local
-```
-
-Set each variable on `.env.local`:
-
-- `MONGODB_URI` - Your MongoDB connection string. If you are using [MongoDB Atlas](https://mongodb.com/atlas) you can find this by clicking the "Connect" button for your cluster.
-
-### Run Next.js in development mode
-
-```bash
-npm install
-npm run dev
-
-# or
-
-yarn install
-yarn dev
-```
-
-Your app should be up and running on [http://localhost:3000](http://localhost:3000)! If it doesn't work, post on [GitHub discussions](https://github.com/vercel/next.js/discussions).
-
-You will either see a message stating "You are connected to MongoDB" or "You are NOT connected to MongoDB". Ensure that you have provided the correct `MONGODB_URI` environment variable.
-
-When you are successfully connected, you can refer to the [MongoDB Node.js Driver docs](https://mongodb.github.io/node-mongodb-native/3.4/tutorials/collections/) for further instructions on how to query your database.
-
-## Deploy on Vercel
-
-You can deploy this app to the cloud with [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-
-#### Deploy Your Local Project
-
-To deploy your local project to Vercel, push it to GitHub/GitLab/Bitbucket and [import to Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example).
-
-**Important**: When you import your project on Vercel, make sure to click on **Environment Variables** and set them to match your `.env.local` file.
-
-#### Deploy from Our Template
-
-Alternatively, you can deploy using our template by clicking on the Deploy button below.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?project-name=with-mongodb&repository-name=with-mongodb&repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fwith-mongodb&integration-ids=oac_jnzmjqM10gllKmSrG0SGrHOH)
+# Attributions
+* Project Boilerplate : https://github.com/vercel/next.js/tree/canary/examples/with-mongodb
+* Auth0 Integration setup : https://github.com/auth0/nextjs-auth0
+* CSS : https://tailwindcss.com/ , Table Component : https://flowbite.com/docs/components/tables/
+* Switch component : https://upmostly.com/tutorials/build-a-react-switch-toggle-component
+* Barcode generation : https://dev.to/hackmamba/create-a-restaurant-barcode-menu-in-nextjs-1i67
+* Deployment : https://vercel.com/, app available at : https://milan-e.vercel.app/
+* Plots using : https://plotly.com/javascript/react/ , demo referred : https://github.com/aulneau/next.js-with-react-plotly.js
