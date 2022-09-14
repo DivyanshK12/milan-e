@@ -19,7 +19,9 @@ This file was auto generated from project setup, as mentioned in the README-Next
 1. User needs to manually switch Halls each time barcode is generated. Button generation per meal is not tested out yet.
 2. Current visualizations for ratings are not very intuitive. Need to work on that to show better insights depending on specific meal and hall.
 3. Pulls menu data from Dashboard's API. This is an external dependecy and has not been updated so is unviable for immediate deployment
+4. The current plots are not made from src data. They are made from a static file. This is a temporary solution and needs to be moved. 
 
+/demo/count and /demo/rating are being used in place of /api/count and /api/rating for now
 # Future Scope 
 1. Hope to eliminate need for carrying ID cards to mess. This system can be made to be more secure than just ID card number very easily
 2. Better Feedback visualizations, possibly per item instead of a meal as a whole would help caterers to make better decisions
