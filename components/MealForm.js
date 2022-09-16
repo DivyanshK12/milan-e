@@ -28,7 +28,7 @@ const MealForm = ({ formId, mealForm, items, hall, meal, date }) => { // will us
 
       const resOld = await fetch(`/api/rating/${id}`, { method: 'GET' })
 
-      if (resOld.ok) {
+      if (resOld.status === 200) {
         resOld.json().then((dataOld) => {
           body.rating = (dataOld.data.rating * dataOld.data.count + currentRating) / (dataOld.data.count + 1)
           body.count = dataOld.data.count + 1

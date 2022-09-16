@@ -14,7 +14,7 @@ export default async function handler(req, res) {
       try {
         const rating = await Rating.findOne({ uid: id }).exec() /* find the model in the database */
         if (!rating) {
-          return res.status(204).json({ success: false })
+          return res.status(204).send()
         }
         res.status(200).json({ success: true, data: rating })
       } catch (error) {
